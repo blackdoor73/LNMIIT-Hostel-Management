@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="Style1.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-
-<body>
-  <form action="REALLOCATE ROOM.html">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="Style1.css">
+  </head>
+  <body>
     <div class="contact-form">
       <h1 id="heading">REALLOCATE ROOM</h1>
       <br>
@@ -18,26 +14,16 @@
         <h3>Roll No</h3>
         <input name="roll no." placeholder="Enter student's roll no." type="text">
       </div>
-      <!-- <div class="tooltip">
-      <h2>Contact No.</h2>
-      <input name="contact no." placeholder="Enter contact no." type="text">
-    </div> -->
-      <div >
+      <div class="tooltip">
+        <h2>Contact No.</h2>
+        <input name="contact no." placeholder="Enter contact no." type="text"> </div>
+      <div>
         <h3>New Room To Allocate</h3>
-        <input name="new room" type="text" placeholder="Enter Room Details">
       </div>
-      <div class='admin'>
-        <a href="REALLOCATE ROOM.html" class='btn btn-danger btn-block'>Save</a>
-      </div>
-      <div class='admin'>
-        <a href="Menu Design management.html" class='btn btn-danger btn-block'>Back</a>
-      </div>
-        </span>
-      </div>
+      <input name="new room" placeholder="Enter Room Details" type="text">
+      <div class="tooltip"> <input name="Reallot" value="Reallot" type="button">
+        <span class="tooltiptext">Send details </span> </div>
     </div>
-  </form>
-  <script></script>
-  </script>
-</body>
-
+    
+  </body>
 </html>
