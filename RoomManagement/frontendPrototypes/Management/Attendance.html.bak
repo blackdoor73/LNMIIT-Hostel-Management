@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+  </head>
+  <body>
+    <div class="contact-form">
+      <h2>ATTENDANCE RECORDS</h2>
+      <br>
+      <input id="DownloadBtn" value="Download Report" type="button">
+      <script>
+        //NOTE ADD FEATURES IN BACKEND SO THAT THIS ONLY EXECUTES AT ALLOWED TIME THAT IS BETWEEN 11 PM TO MIDNIGHT
+            function download(filename, textInput) 
+        {
+//Create an anchor tag <a> using the createElement property and assign download and href attributes to it.
+                  var element = document.createElement('a');
+          				element.setAttribute('download', filename);
+          //Use the encodeURIComponent to encode the text and append it to URI as its component. 
+          //This will help us to replace certain special characters with a combination of escape sequences.
+                  element.setAttribute('href','data:text/plain;charset=utf-8, ' + encodeURIComponent(textInput));
+                  //Append this created element to the body of the document(HTML page)
+                  document.body.appendChild(element);
+          				//Use element.click() to simulate a mouse click.
+                  element.click();
+          				//Remove the element from the body of the document(HTML page).
+                  //document.body.removeChild(element);
+            }
+        
+            document.getElementById("DownloadBtn").addEventListener("click", 
+                                    function () 
+                                    {
+                        								var text = "Report contents";//put up the text in this downloaded documents stored in this variable
+                        								var filename = "SampleReport.txt";
+              													//call the download function defined above
+                        								download(filename, text);
+                        						}, 
+           false);
+        
+        
+      </script>
+      <p style="text-align: center;"> Note that today's report is only available
+        for download between 11 pm to 12 noon </p>
+      <br>
+      <input name="d1" id="DatePicker" type="date"> <br>
+      <div class="tooltip"> <input name="View past" value="Check Past Records"
+
+id="PastBtn" type="button"> <span class="tooltiptext">View the report of the
+          entered date</span> </div>
+      <script>
+        document.getElementById("PastBtn").addEventListener("click", 
+                                    function () 
+                                    {
+                        								var text = "Date entered was \t: "+ document.getElementById("DatePicker").value;;//put up the text in this downloaded documents stored in this variable
+                        								var filename = "SampleTimeReport.txt";
+              													//call the download function defined above with text as date
+                        								download(filename, text);
+                        						}, 
+           false);
+        
+      </script> </div>
+    <script>
+
+  </script>
+    
+  </body>
+</html>

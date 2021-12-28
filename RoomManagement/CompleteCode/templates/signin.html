@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>LNM Hostel-Management</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="https://admissions.lnmiit.ac.in/assets/img/gallery/big/BOYS%20HOSTEL%203.jpg">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+	.button {
+		background-color: #008CBA;
+		/* Green */
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+	}
+	body{
+
+    background-image:url('https://admissions.lnmiit.ac.in/assets/img/gallery/big/BOYS%20HOSTEL%203.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+
+    }
+
+</style>
+
+<body>
+
+
+
+	<div class="container">
+		<div class="col-lg-10 text-center mx-auto m-3 p-3">
+			<p class="display-6"><b>LNM Hostel-Management</b></p>
+		</div>
+		<div class="row justify-content-center " >
+			<div class="col-md-6 col-lg-4" style="border:3px solid #dc3545;background-color: white;">
+				<br/>
+				<div class="login-wrap p-3">
+					{% for message in messages %}
+					<div class="alert alert-danger">{{message}}</div>
+					{% endfor %}
+					<form action="{% url 'management:signin' %}" class="signin-form" method="POST">
+
+						{% csrf_token %}
+						<div class="form-group mb-3 p-2">
+							<input type="text" name="username" class="form-control" placeholder="Username" required>
+						</div>
+						<div class="form-group mb-3 p-2">
+							<input id="password-field" type="password" class="form-control " placeholder="Password"
+								name="password" required>
+							<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+						</div>
+						<div class="form-group">
+							<button type="submit"
+								class=" form-control btn btn-success btn-lg border rounded btn-danger">Sign
+								In</button>
+						</div>
+
+						<br/>
+					</form>
+					<a href="admin/"><button type="submit"
+								class=" form-control btn btn-success btn-lg border rounded btn-danger">Sign In as admin</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>

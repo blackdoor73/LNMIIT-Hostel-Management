@@ -1,0 +1,145 @@
+{% extends "nav_bar.html" %}
+{% load static %}
+{% block content %}
+<style>
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=text],
+  select {
+    width: 100%;
+    padding: 12px 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=number],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+    input[type=password],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+
+  input[type=submit] {
+    width: 108%;
+    background-color: #dc3545;
+    ;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 40px -15px;
+    opacity: 1;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    opacity: 0.7;
+  }
+
+  #content-wrapper {
+    width: 100%;
+    padding: 15px;
+    padding-left: 345px;
+  }
+
+
+
+</style>
+
+  <div id="wrapper">
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-lg-7">
+
+            <div class="row mx-auto">
+              <div class="col-lg-12" style="border:3px solid #dc3545;background-color: white;">
+              <h1 class="d-flex justify-content-center">Your Profile <i class="fas fa-comment-medical ms-3 p-1"></i>
+              </h1><br/>
+              <div style="padding: 30px 15px;">
+                <form method="POST" action="{% url 'management:profile' %}">
+                  {% csrf_token %}
+                  <div>
+                        <label for="roll_num" class="labels">Roll Number</label><br/>
+                  <input type="text" id="roll_num" name="roll_num" value='{{roll_num}}' readonly>&nbsp;
+                  </div>
+
+                  <div>
+                        <label for="name" class="labels">Name</label><br/>
+                  <input type="text" id="name" name="name" value='{{name}}' readonly>&nbsp;
+                  </div>
+
+                  <div>
+                        <label for="mail" class="labels">Email</label><br/>
+                  <input type="text" id="mail" name="mail" value='{{mail}}' readonly>&nbsp;
+                  </div>
+
+                  <div>
+                        <label for="room_num" class="labels">Room</label><br/>
+                  <input type="text" id="room_num" name="room_num" value='{{room}}' readonly>&nbsp;
+                  </div>
+
+                  <div>
+                        <label for="student_contact_num" class="labels">Student's Contact Number</label><br/>
+                  <input type="number" id="student_contact_num" name="student_contact_num" value={{student_contact_num}} readonly>&nbsp;
+                  </div>
+
+                  <div>
+                        <label for="guardian_contact_num" class="labels">Guardian's Contact Number</label><br/>
+                  <input type="number" id="guardian_contact_num" name="guardian_contact_num" value={{guardian_contact_num}} readonly>&nbsp;
+                  </div>
+
+                  <div>
+                        <label for="password1" class="labels">New Password</label><br/>
+                  <input type="password" id="password1" name="password1" required>&nbsp;
+                  </div>
+                  <div>
+                        <label for="password2" class="labels">Confirm Password</label><br/>
+                  <input type="password" id="password2" name="password2" required>&nbsp;
+                  </div>
+                  <div>
+                  <input type="submit" value="SAVE CHANGES">
+                  </div>
+                </form>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

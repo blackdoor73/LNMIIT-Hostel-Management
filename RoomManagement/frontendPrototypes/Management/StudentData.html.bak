@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Student Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&amp;display=swap"
+
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Style1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="contact-form">
+      <h2>Student Data</h2>
+      <form action="">
+        <p>Roll Number</p>
+        <input id="name" placeholder="Enter Roll Number">
+        <div align="center"> <input name="Get Details" value="Get Details" id="press"
+
+onclick="clicked()" type="button"> </div>
+        <br>
+        <div id="hide">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>Roll number</th>
+                <th>Name</th>
+                <th>Contact number</th>
+                <th>occupied room</th>
+                <th>Hostel Number</th>
+              </tr>
+              <tr>
+                <td id="namechange">19ucs127 </td>
+                <td> Abhishek</td>
+                <td> 98********</td>
+                <td>E-20* </td>
+                <td>Bh1 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <script>
+//javascript to display certain content on the click of a button
+				var i=0;
+				if(i==0){
+					var visible = document.getElementById("hide");
+					visible.style.display = "none";
+				}
+				function clicked() {
+				 
+					var visible = document.getElementById("hide");
+					visible.style.display = "block";
+					i=1;
+					document.getElementById("namechange").innerHTML = document.getElementById("name").value
+				}
+					</script> </form>
+    </div>
+    
+  </body>
+</html>

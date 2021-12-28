@@ -1,0 +1,3 @@
+Some windows are not been implemented
+You can access most windows by clicking the respective buttons in the menu design window.
+Student's room change request window is present in the students folder and can be only opened from there.
