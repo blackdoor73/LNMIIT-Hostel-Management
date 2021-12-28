@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" href="https://admissions.lnmiit.ac.in/assets/img/gallery/big/BOYS%20HOSTEL%203.jpg">
+    <title>LNM Hostel-Management</title>
+    <style>
+    body{
+
+    background-image:url('https://admissions.lnmiit.ac.in/assets/img/gallery/big/BOYS%20HOSTEL%203.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+
+    }
+    </style>
+  </head>
+  <body >
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container">
+    <!-- Navbar brand -->
+    <a class="navbar-brand me-2" href="{% url 'management:menu' %}">
+    LNM Hostel-Management
+    </a>
+
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarButtonsExample"
+      aria-controls="navbarButtonsExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+
+      <div class="d-flex align-items-center">
+        <a class="nav-link" href="{% url 'management:profile' %}">
+        <button type="button" class="btn btn-link px-3 me-2" style="text-decoration: none !important;">
+          {{ user.username }}
+        </button>
+      </a>
+        <a href="..{% url 'management:signin' %}">
+        <button type="button" class="btn btn-primary me-3">
+
+          Logout
+
+        </button>
+        </a>
+      </div>
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+
+<!-- Navbar -->
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+  </body>
+</html>
