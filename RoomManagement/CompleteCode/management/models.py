@@ -1,7 +1,9 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User #importing django's inbuilt user Model
 from django.db import models
 from django.utils import timezone
-
+#This models file is used to define the tables i.e. database schema
+#here none of the primary keys have been defined by developers but django's automatic primary key generation has been used
+#to specify a custom primary key in place of automatically generated one, specify primary_key=True on the required  field.
 class Hostel(models.Model):
     hostel_number = models.CharField(max_length=2, null=False)
     warden = models.CharField(max_length=30, null=False)
@@ -12,7 +14,7 @@ class Hostel(models.Model):
 
 
 class Room(models.Model):
-    hostel = models.ForeignKey(Hostel, on_delete=models.CASCADE, null=False)
+    hostel = models.ForeignKey(Hostel, on_delete=models.CASCADE, null=False) #Foreign key relationship
     room_num = models.IntegerField(null=False)
     wing = models.CharField(max_length=1, null=False)
     floor = models.IntegerField(null=False)

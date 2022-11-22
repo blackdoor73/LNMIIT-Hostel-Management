@@ -6,7 +6,7 @@ from .models import *
 from django.db.models import F
 admin.site.site_header = 'LNMIIT Hostel Admin Panel'
 admin.site.unregister(Group)
-
+#this file specifies what all information is displayed on admin login and also in what manner it is managed and updated
 
 def update_status():
     students = Student.objects.all()

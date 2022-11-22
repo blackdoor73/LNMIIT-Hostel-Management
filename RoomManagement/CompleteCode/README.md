@@ -1,4 +1,5 @@
 # Room Management module for LNMIIT HOSTEL MANAGEMENT SYSTEM PROJECT
+# selfnotes folder has credentials to login with existing user IDs
 Implemented using python through django framework at backend ,sqlite3 database along with html and css for templates of frontend pages
 To Run the django system from the folder 
 1)Install python 3 and django on your system
