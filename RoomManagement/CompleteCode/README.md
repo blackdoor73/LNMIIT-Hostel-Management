@@ -3,8 +3,7 @@
 Implemented using python through django framework at backend ,sqlite3 database along with html and css for templates of frontend pages
 To Run the django system from the folder 
 1)Install python 3 and django on your system
-
-    (Below are Django installation and setup instructions from :https://docs.djangoproject.com/en/4.0/topics/install/ )
+(Below are Django installation and setup instructions from :https://docs.djangoproject.com/en/4.0/topics/install/ )
     Creating a virtual environment:
         python -m venv project1-env
     Activating virtual environment:
@@ -12,9 +11,7 @@ To Run the django system from the folder
     Install Django:
         on windows : py -m pip install Django
         on mac or linux:python -m pip install Django
-
     Make sure that  Git is installed and that its commands can from a shell. (Enter git help at a shell prompt to test this.)
-
     Check out (github command)Django’s main development branch using command :
         git clone https://github.com/django/django.git
     Install django from cloned repository
