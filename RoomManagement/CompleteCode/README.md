@@ -16,6 +16,7 @@ To Run the django system from the folder
         python -V           (If python was installed through app on windows store)
     To Check the version of Django installed run command 
         Django-admin --version
+    If Django was installed on a Python virtual environment instead of Python core installation, we first have to go into that virtual environment by using workon yourvirtualenvname
     Make sure that  Git is installed and that its commands can from a shell. (Enter git help at a shell prompt to test this.)
     Check out (github command)Django’s main development branch using command :
         git clone https://github.com/django/django.git
